@@ -1,0 +1,31 @@
+[project]
+name = "ev-charge-planner"
+version = "0.1.0"
+description = "Smart EV charge planner: cheapest or lowest-carbon home charging by departure time."
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["ruff>=0.8", "shellcheck-py>=0.10"]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # isort
+    "B",        # bugbear
+    "UP",       # pyupgrade
+    "SIM",      # simplify
+    "DTZ",      # naive datetimes: this domain is all UTC vs Europe/London
+    "RUF",
+]
+ignore = [
+    "E501",     # ruff format owns line length; long user-facing f-strings stay intact
+]
