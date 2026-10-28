@@ -41,6 +41,7 @@ LINKED_DOCS = [
     ROOT / "docs/architecture.md",
     ROOT / "docs/intent.md",
     *sorted(DECISIONS.glob("*.md")),
+    *sorted((ROOT / "docs/tickets").glob("*.md")),
     SKILL / "SKILL.md",
     *sorted(FEATURES.glob("*.md")),
 ]

@@ -18,6 +18,7 @@ Keep these true in the same change that makes them stale:
 | [docs/architecture.md](docs/architecture.md) | a component, data source, store or flow is added, moved or built |
 | [docs/intent.md](docs/intent.md) | a goal, principle or non-goal changes |
 | [docs/decisions/](docs/decisions/README.md) | a product or project decision is made (add a numbered file; supersede, don't rewrite) |
+| [docs/tickets/](docs/tickets/README.md) | work on a milestone starts or finishes (`status`), or its scope or acceptance criteria change |
 | `pyproject.toml`, `scripts/lint.sh`, `scripts/lint_docs.py` | new code falls outside lint coverage, or a doc's required structure changes |
 
 A Stop hook (`.claude/hooks/doc-check.sh`) diffs each turn's changes and runs a headless doc-checking subagent. If a doc is stale, it blocks the stop and lists what to update. Set `DOC_CHECK_DISABLE=1` to skip it. Its last report is in `.claude/state/doc-check-last-<session>.json`.
